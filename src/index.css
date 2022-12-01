@@ -1,22 +1,27 @@
 body {
-	margin: 0;
-	background-image: url('bg.jpg');
-	background-size: cover;
-  background-blend-mode:soft-light;
+  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1504064860048-974c8788c612?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+  background-size: cover;
+  background-blend-mode: soft-light;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-   animation: myfirst 2s ;  
-
+  animation: myfirst 2s;
+  font-family: Georgia, serif;
+  font-weight: bold;
 }
- @keyframes myfirst {
-    from {opacity: 0.2;}
-    to {opacity: 1;}
+
+@keyframes myfirst {
+  from {
+    opacity: 0.2;
   }
+  to {
+    opacity: 1;
+  }
+}
 @media (max-width: 600px) {
   body {
-    background-color: aquamarine;
-   
+    background-color: #228b22;
   }
 }
 /* body {
