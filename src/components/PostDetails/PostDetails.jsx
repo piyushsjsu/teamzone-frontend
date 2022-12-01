@@ -4,7 +4,7 @@ import {
 	Typography,
 	CircularProgress,
 	Divider,
-} from "@material-ui/core/";
+} from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
 import { useParams, useHistory, Link } from "react-router-dom";
