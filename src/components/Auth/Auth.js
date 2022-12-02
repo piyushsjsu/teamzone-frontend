@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import {gapi} from "gapi-script"
 import { useDispatch } from "react-redux";
 import {
   Avatar,
@@ -27,6 +28,11 @@ const initialState = {
 };
 
 const SignUp = () => {
+  useEffect(()=>{
+    gapi.load("client:auth2",()=>{
+      gapi.client.init({clientId:"178993936238-7vvul3igsrgjc9sr7kkavs5v7ridgaae.apps.googleusercontent.com", plugin_name:"teamzone"});
+    });
+  })
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(false);
   const dispatch = useDispatch();
