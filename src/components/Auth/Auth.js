@@ -148,6 +148,7 @@ const SignUp = () => {
             onSuccess={googleSuccess}
             onFailure={(err) => console.log("fail", err)}
             cookiePolicy="single_host_origin"
+            plugin_name="teamzone_plugin"
           />
           <Grid container justify="flex-end">
             <Grid item>
