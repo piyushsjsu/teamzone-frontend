@@ -29,9 +29,9 @@ const initialState = {
 
 const SignUp = () => {
   useEffect(()=>{
-    gapi.load("client:auth2",()=>{
-      gapi.client.init({clientId:"178993936238-7vvul3igsrgjc9sr7kkavs5v7ridgaae.apps.googleusercontent.com", plugin_name:"teamzone"});
-    });
+    gapi.load("auth2",()=>{
+      gapi.auth2.init({clientId:"178993936238-7vvul3igsrgjc9sr7kkavs5v7ridgaae.apps.googleusercontent.com", plugin_name:"teamzone"})
+    })
   })
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(false);
@@ -148,13 +148,12 @@ const SignUp = () => {
                 startIcon={<Icon />}
                 variant="contained"
               >
-                Google Sign In
+                Google Sign Up
               </Button>
             )}
             onSuccess={googleSuccess}
             onFailure={(err) => console.log("fail", err)}
             cookiePolicy="single_host_origin"
-            plugin_name="teamzone_plugin"
           />
           <Grid container justify="flex-end">
             <Grid item>
