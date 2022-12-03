@@ -27,6 +27,7 @@ const initialState = {
   confirmPassword: "",
 };
 
+
 const SignUp = () => {
   useEffect(()=>{
     gapi.load("auth2",()=>{
